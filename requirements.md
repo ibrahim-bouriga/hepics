@@ -103,20 +103,20 @@ FPGA
 
 # Glossar #
 
-Neuronale Netze
-Alex Net 
-FPGA GUI
-GPU
-DSP
-Google Net
-Beschleunigungshardware
-High Performance
-Low Power
-Energy Efficency
-Ubuntu
-QT
-Workstation
-Echtzeitanwendung
-Moblile Plattformen
+* Neuronale Netze
+* Alex Net 
+* FPGA GUI
+* GPU
+* DSP
+* Google Net
+* Beschleunigungshardware
+* High Performance
+* Low Power
+* Energy Efficency
+* Ubuntu
+* QT
+* Workstation
+* Echtzeitanwendung
+* Moblile Plattformen
 
 
