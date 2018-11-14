@@ -84,7 +84,26 @@ FPGA
 
 # Produktleistungen #
 
-# Bedienoberfläche #
+# Graphical User Interface #
+## Introduction ##
+* The GUI, which represents the front-end, is the communication channel between the user and the back-end. It will guide users through the variety of operations which can be performed by the System.
+
+## Start-Window ##
+* After program start a welcome window, with informations on the Software, will be displayed.(See figure x.xx)
+
+## Choose-Operation-Window ##
+* After clicking on Start-button in the start-window, another window will pop up. The user will have to chose a running mode:
+1- High Performance
+2- Low Power Consumption
+3- High Energy Efficiency
+and browse to the image path
+* See figure (x.xx)
+
+## Browsing-Window ##
+* The browser window allows a user to specify his input image.
+
+## Error-Window ##
+* If the operation mode or the input data was not specified an error is shown to notify the user. Here we can create two windows for each error See figure (x.xx)
 
 # Qualitätszielbestimmungen #
 * Durch die Beschleunigungshardware soll eine Beschleunigung oder eine Energieersparnis erreicht werden
