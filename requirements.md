@@ -66,15 +66,15 @@ FPGA
 
 ## System-Daten ##
 
-* Klassifikation mit Percent Bar
+* /D10/ Klassifikation mit Percent Bar
 
 ## Benutzer-Daten ##
 
-* /D10/ Zur Klassifizierung muss das Originalbild sowie das Ergibnis vorgehalten werden 
+* /D20/ Zur Klassifizierung muss das Originalbild sowie das Ergibnis vorgehalten werden 
 
-* /D20/ über einen Kunden sind folgenden Daten zu speichern: Das Bild, das der Benutzer hochlädt.
+* /D30/ über einen Kunden sind folgenden Daten zu speichern: Das Bild, das der Benutzer hochlädt.
 
-* /D30/ wenn ein Benutzer mehr als ein Bild hochlädt, werden alle Bilder gespeichert gespeichert.
+* /D40/ wenn ein Benutzer mehr als ein Bild hochlädt, werden alle Bilder gespeichert gespeichert.
 
 
 # Systemmodell #
