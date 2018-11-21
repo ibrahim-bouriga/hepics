@@ -83,22 +83,17 @@
  * /F140/ show neural network topology
  * /F150/ show output results in clear form (with histogram or pie chart)
 
-# Produktdaten #
+# Product-Data #
+ ## System-Data ##
 
-## System-Daten ##
-* Klassifikation mit Percent Bar
+  * /D10/classification with percent bars
 
-## Benutzer-Daten ##
-
-### /D10/ ###
-### Zur Klassifizierung muss das Originalbild sowie das Ergibnis vorgehalten werden ###
-
-### /D20/ ###
-#### über einen Kunden sind folgenden Daten zu speichern /LD10/ ####
-* Das Bild, das der Benutzer hochlädt.
-
-### /D30/ ###
-#### wenn ein Benutzer mehr als ein Bild hochlädt, werden alle Bilder gespeichert gespeichert ###
+ ## User-Data ##
+ 
+  * /D20/ For classification the original image and the result must be kept.
+  * /D30/ The following user-data should be saved: /LD10/ 
+     * Image that the user uploads
+  * /D40/ If a user uploads more than one image, all images will be saved.
 
 
 # Systemmodell #
@@ -117,22 +112,20 @@
 * Wahl des Profils
 * Wahl des Netzes
 
-# Produktleistungen #
-
-* Zum starten des Programms muss der Benutzer auf start klicken.
-* the user have to choose the running mode with one click
-* Der Benutzer muss zum Hochladen eines Bildes höchstens drei Tasten betätigen
-* Während Klassifizieren eines Bildes muss für den Benutzer ein (Prozent der benötigte Zeit) sichtbar sein.
-* No real time requirements
+# Product Performance #
+ * To start the program, the user must click start-button.
+ * User must choose the operation mode with one click.
+ * The user does not need to press more than three buttons to upload an image.
+ * While classifying an image one percent of the time required must be visible to the user .
+ * No real time requirements.
 
 # Bedienoberfläche #
 
-# Qualitätszielbestimmungen #
-* Durch die Beschleunigungshardware soll eine Beschleunigung oder eine Energieersparnis erreicht werden
-* Die Testabdeckung soll möglichst hoch sein
-* Wart- und Wiederverwendbarkeit ergibt sich durch die Implementierung im MVC -Prinzip.
-* Robustheit spielt bei der Entwicklung eine maßgebliche Rolle, so dass willkürliches Tastendrücken nicht zum Absturz führt.
-
+# Quality Determination #
+* The acceleration hardware should accelerate or save power consumption.
+* The test coverage should be as high as possible.
+* Maintenance and reusability results from the implementation in the MVC principle.
+* Robustness plays a crucial role in the development, so that arbitrary keystrokes do not lead to a crash.
 
 # Testfälle und Testszenarien #
 
