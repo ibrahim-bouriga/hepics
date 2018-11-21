@@ -27,40 +27,61 @@
 * Keine Echtzeitanwendung
 * Nicht für Moblile Plattformen
 
-# Produkteinsatz #
+# Product Use #
+ 
+ ## Use Range ##
+ This program is designed for image classification. The user or subsystem can use this program to recognize pre-specified or learned
+ objects or object classes. Owing to running on heterogeneous platforms, user is also allowded to switch various operation modes for
+ different goals. Besides, the user can deploy training of an arbitrary neural network and transfer learning of an already implemented
+ neural network. 
+ 
+ ## Target Group ##
+ * developers of the compared system
+ * users who need to classify images
+ * systems which process images or solve problem in computer vision 
 
-## Einsatzgebiet ##
-* Vergleichssystem
-* System zur Massenklassifikation
-* Subsystem
+ 
+ ## Operation Precondition ##
+ The following conditions must be met:
+ * Hardware and software as follows must be available: 
+     Host PC with Ubuntu 16.04, FPGA
+ * System and possible user-system must be installed.
+ * Images must be accessible to file system.
 
-## Zielgruppe ##
-* Entwickler von vergleichbaren Systemen
-* Nutzer die viele Bilder zu klassifizieren haben
-* Systeme die eine Bildklassifikation gebrauchen können
 
-## Betriebsbedingungen ##
-* Hardware und Software wie unten vorhanden
-* System und mögliche Nutersysteme sind installiert
-* Bilder müssen über Dateisystem zugänglich sein
+# Product Environment #
+ 
+ ## Software ##
+ * Ubuntu 16.04 - operating system of Host PC
+ * QT - to create classic and embedded GUI
+ * OpenCL - framework for writing programs that execute across heterogeneous platforms
+ 
+ ## Hardware ##
+ * Lab PC at CDNC institute
+ * FPGA
 
-# Produktumgebung #
+# Product Functions #
+ ## Basic Functions ##
 
-## Software ##
-Ubuntu 16.04
-QT
+ * /F010/ show welcome screen
+ * /F020/ show start menu
+ * /F030/ choose input image (at least 5 images of an object at various angels)
+ * /F040/ reset the selection
+ * /F050/ choose operation mode: High Performance, Low Power Consumption, High Energy Efficiency
+ * /F060/ start processing
+ * /F070/ pause processing
+ * /F080/ stop processing
+ * /F090/ show output results (names and precents of top 5)
+ * /F100/ terminate program
 
-## Hardware ##
-Workstation
-FPGA
 
-# Produktfunktionen #
-* Auswahl Netz
-* Auswahl Profil
-* Auswahl Bilder
-* Start der Verarbeitung
-* Pause der Verarbeitung
-* Stop der Verarbeitung
+ ## Optional Functions ##
+
+ * /F110/ choose neural network type
+ * /F120/ deploy training of an arbitraty neural network
+ * /F130/ transfer learning of the already implemented neural network
+ * /F140/ show neural network topology
+ * /F150/ show output results in clear form (with histogram or pie chart)
 
 # Produktdaten #
 
