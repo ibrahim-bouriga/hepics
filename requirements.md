@@ -87,14 +87,16 @@ FPGA
 
 ## Start-Window ##
 * After program start a welcome window, with informations on the Software, will be displayed.(See figure x.xx)
+![](images/Main_Window.png)
 
 ## Choose-Operation-Window ##
 * After clicking on Start-button in the start-window, another window will pop up. The user will have to chose a running mode:
-1- High Performance
-2- Low Power Consumption
-3- High Energy Efficiency
+* 1- High Performance
+* 2- Low Power Consumption
+* 3- High Energy Efficiency
 and browse to the image path
 * See figure (x.xx)
+![](images/Moperation_mode_window.png)
 
 ## Browsing-Window ##
 * The browser window allows a user to specify his input image.
