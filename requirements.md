@@ -96,7 +96,7 @@ FPGA
 * 3- High Energy Efficiency
 and browse to the image path
 * See figure (x.xx)
-![](images/Moperation_mode_window.png)
+![](images/operation_mode_window.png)
 
 ## Browsing-Window ##
 * The browser window allows a user to specify his input image.
