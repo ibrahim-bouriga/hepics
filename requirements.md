@@ -63,8 +63,21 @@ FPGA
 * Stop der Verarbeitung
 
 # Produktdaten #
-* Gewichte für Neuronales Netz
-* Bilder
+## System-Daten ##
+* Klassifikation mit Percent Bar
+
+## Benutzer-Daten ##
+
+### /D10/ ###
+### Zur Klassifizierung muss das Originalbild sowie das Ergibnis vorgehalten werden ###
+
+### /D20/ ###
+#### über einen Kunden sind folgenden Daten zu speichern /LD10/ ####
+* Das Bild, das der Benutzer hochlädt.
+
+### /D30/ ###
+#### wenn ein Benutzer mehr als ein Bild hochlädt, werden alle Bilder gespeichert gespeichert ###
+
 
 # Systemmodell #
 
@@ -84,11 +97,20 @@ FPGA
 
 # Produktleistungen #
 
+* Zum starten des Programms muss der Benutzer auf start klicken.
+* the user have to choose the running mode with one click
+* Der Benutzer muss zum Hochladen eines Bildes höchstens drei Tasten betätigen
+* Während Klassifizieren eines Bildes muss für den Benutzer ein (Prozent der benötigte Zeit) sichtbar sein.
+* No real time requirements
+
 # Bedienoberfläche #
 
 # Qualitätszielbestimmungen #
 * Durch die Beschleunigungshardware soll eine Beschleunigung oder eine Energieersparnis erreicht werden
 * Die Testabdeckung soll möglichst hoch sein
+* Wart- und Wiederverwendbarkeit ergibt sich durch die Implementierung im MVC -Prinzip.
+* Robustheit spielt bei der Entwicklung eine maßgebliche Rolle, so dass willkürliches Tastendrücken nicht zum Absturz führt.
+
 
 # Testfälle und Testszenarien #
 
