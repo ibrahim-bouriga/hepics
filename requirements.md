@@ -67,17 +67,19 @@ FPGA
 * Bilder
 
 # Systemmodell #
+* Programming with less complexity makes delightful code that is less buggy and easier to maintain because it is reusable   * without modification. In order to achieve this goal we use in this context the MVC architecture wich consists of:
+* The model represents the data, and does nothing else. The model does NOT depend on the controller or the view.
 
 ## Modell ##
-* Neuronales Netz
-* Convolutional part
+* The model represents the data, and does nothing else. The model does NOT depend on the controller or the view.
+* It contains the pretrained neural network model AlexNet as well as the classification algorithm to be used on images.
 
 ## View ##
-* Anzeige des Bildes/Ordners
-* Anzeige des Profils
-* Anzeige des Netzes
+* The view displays the model data, and sends user actions (e.g. button clicks) to the controller
+* It represents the graphical user ineterface wich interacts with the user (See Graphical User Interface)
 
 ## Controller ##
+* The controller provides model data to the view, and interprets user actions such as button clicks. The controller      *    * depends on the view and the model.
 * Bilderwahl/Ordnerwahl
 * Wahl des Profils
 * Wahl des Netzes
