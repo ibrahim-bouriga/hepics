@@ -7,7 +7,7 @@ Nowadays, machine learning is gaining in importance as the goal of including mac
 
 It must not be forgotten to mention as well, that there exists different neural networks models, such as Back-Propagation, Boltzman Machines and Deep Neural Networks, with which we will deal in this project. In particular, we will deal with "AlexNet", which is a convolutional neural network consisting of 8 layers, 5 of which are convolutional while the others are fully-connected layers.
 
-On one hand, deploying deep neural networks not means unlocking a massive parallelism potential for our system, but it also means that unsupervised learning is most definitely possible. On the other, we are in need of a huge data set for this unsupervised training. It is important to mention as well, that deep neural networks require intense computations, which manifests itself in high power consumption and learning and classification time.
+On one hand, deploying deep neural networks not only means unlocking a massive parallelism potential for our system, but it also means that unsupervised learning is most definitely possible. On the other, we are in need of a huge data set for this unsupervised training. It is important to mention as well, that deep neural networks require intense computations, which manifests itself in high power consumption and learning and classification time.
 
 For the sake of decreasing the number of disadvantages of deep neural networks, the decision of using heterogeneous platforms such as CPUs, GPUs and FPGAs was made. These will provide the system with a good performance for a wide range of computations, as well as a decent usage of pipelines and parallelism, and of course, all with low power consumption.
 
@@ -19,30 +19,48 @@ To take a taste at the fascinating world of machine learning and artificial neur
 ## Must-requirements ##
 
 * The system must be able to classify images.
-* The system must employ artificial neural networks
+* The system must allow the selection of one or more input images.
+* The system must show the result of the treatment.
+* The system must employ artificial neural networks.
 * The system must deploy the AlexNet deep neural network.
+* The system must know at least one set of weights.
 * The system must be able to execute intense calculations through heterogeneous platforms (CPU, GPU, FPGA, ASIC).
 * The system must support an FPGA through OpenCL.
+* The system must hide the OpenCL details behind an abstraction layer.
 * The system must offer three performance profiles : 
    -High Performance
    -Low Power
    -Energy Efficency
 * The system must allow the control and the execution of commands through a GUI interface.
+* The system must be able to run the GUI on an Ubuntu system.
 * The system must exhibit a classification interface.
 * The system must be able to measure its performance.
 * The system must be able to measure its power consumption.
+* The system communicate with another system. It looks into a file to search for an image treatment request, and send back the results via Ethernet connection.
+* The system must include the aggregate feature. This feature fuses the results of different treatments of the same object in order to reach more precision.
+* The system must offer the possibility of entering up to 5 images in the aggregate feature.
+
 
 ## Can-Requirements ##
 
+* The system can offer the possibility of entering more than 5 images in the aggregate feature.
 * The system can deploy a GPU.
 * The system can deploy a DSP.
 * The system can deploy the GoogleNet neural network next to AlexNet. 
 * The system can allow the training of neural networks.
-* The system can display the topology of the neural network.Kann die Topologie des Neuronalen Netzes anzeigen.
+* The system can display the topology of the neural network.
+* The system can write the results into a file in order to use it for another program.
+* The system can run batch processing.
+* The system can carry out transfer learning of the already implemented neural network.
+* The system can beautify the output result.
+* The system can generate weight files.
+* The system can load different weight files.
+* The system can pause, resume or cancel the classification process.
+
 
 ## Criteria of demarcation ##
-* The system isn't expected to support real-time applications.
-* The system isn't expected to run on mobile-plattforms.
+* The system cannot be a real-time application.
+* The system cannot run on mobile-plattforms.
 
 # Produkteinsatz #
 
