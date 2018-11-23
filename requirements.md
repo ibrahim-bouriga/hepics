@@ -121,7 +121,7 @@
 
 # Bedienoberfläche #
 
-# Quality Determination #
+# Quality Specification #
 * The acceleration hardware should accelerate or save power consumption.
 * The test coverage should be as high as possible.
 * Maintenance and reusability results from the implementation in the MVC principle.
