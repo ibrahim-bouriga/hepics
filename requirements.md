@@ -29,24 +29,34 @@
 
 # Product Use #
  
- ## Use Range ##
- This program is designed for image classification. The user or subsystem can use this program to recognize pre-specified or learned
- objects or object classes. Owing to running on heterogeneous platforms, user is also allowded to switch various operation modes for
- different goals. Besides, the user can deploy training of an arbitrary neural network and transfer learning of an already implemented
- neural network. 
+ ## Field of application ##
+ This program is designed for image classification. The user or system can use this program to recognize pre-specified or learned objects. Because the system runs on heterogeneous platforms, the user is allowed to switch between various operation modes depending on power or performance preferences.
+Victims of strokes or memory problems have a hard time recognizing even the most simple objects we deal with everyday. Building on this system, it would be possible to help these people to rebuild their memories or label the objects presented on the images. It can also help the visually disabled have a better idea about their environment through processing images they choose.
+Another application of this system is the optimization of the traffic lights through equipping them with a functionality that would set the traffic free for other sides, if the current side is empty.
+We can think about a use in the tourism field as well, as tourists may want to have a better idea about buildings or statues of the city they are visiting, which they can do through our system.
  
  ## Target Group ##
- * developers of the compared system
+ * people with impaired vision
+ * tourists
+ * developers of other systems
  * users who need to classify images
- * systems which process images or solve problem in computer vision 
+ * systems which process images or solve problem in computer vision
 
  
- ## Operation Precondition ##
+ ## Operation Condition ##
  The following conditions must be met:
  * Hardware and software as follows must be available: 
-     Host PC with Ubuntu 16.04, FPGA
+     Host PC with Ubuntu 16.04
+     FPGA
  * System and possible user-system must be installed.
  * Images must be accessible to file system.
+ * Host PC must be powered.
+ * FPGA must be powered.
+ * Images must be JPG.
+ * FPGA have to be connected to Host PC.
+ * There must be enough storage for the program.
+ * There must be enough storage to store results. 
+ 
 
 
 # Product Environment #
