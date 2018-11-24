@@ -28,9 +28,9 @@ To take a taste at the fascinating world of machine learning and artificial neur
 * The system must support an FPGA through OpenCL.
 * The system must hide the OpenCL details behind an abstraction layer.
 * The system must offer three performance profiles : 
-   -High Performance
-   -Low Power
-   -Energy Efficency
+    - High Performance
+    - Low Power
+    - Energy Efficency
 * The system must allow the control and the execution of commands through a GUI interface.
 * The system must be able to run the GUI on an Ubuntu system.
 * The system must exhibit a classification interface.
@@ -64,85 +64,86 @@ To take a taste at the fascinating world of machine learning and artificial neur
 
 # Product Use #
  
- ## Field of application ##
- This program is designed for image classification. The user or system can use this program to recognize pre-specified or learned objects. Because the system runs on heterogeneous platforms, the user is allowed to switch between various operation modes depending on power or performance preferences.
+## Field of application ##
+This program is designed for image classification. The user or system can use this program to recognize pre-specified or learned objects. Because the system runs on heterogeneous platforms, the user is allowed to switch between various operation modes depending on power or performance preferences.
 Victims of strokes or memory problems have a hard time recognizing even the most simple objects we deal with everyday. Building on this system, it would be possible to help these people to rebuild their memories or label the objects presented on the images. It can also help the visually disabled have a better idea about their environment through processing images they choose.
 Another application of this system is the optimization of the traffic lights through equipping them with a functionality that would set the traffic free for other sides, if the current side is empty.
 We can think about a use in the tourism field as well, as tourists may want to have a better idea about buildings or statues of the city they are visiting, which they can do through our system.
  
- ## Target Group ##
- * people with impaired vision
- * tourists
- * developers of other systems
- * users who need to classify images
- * systems which process images or solve problem in computer vision
+## Target Group ##
+* people with impaired vision
+* tourists
+* developers of other systems
+* users who need to classify images
+* systems which process images or solve problem in computer vision
 
  
- ## Operation Condition ##
- The following conditions must be met:
- * Hardware and software as follows must be available: 
-     Host PC with Ubuntu 16.04
-     FPGA
- * System and possible user-system must be installed.
- * Images must be accessible to file system.
- * Host PC must be powered.
- * FPGA must be powered.
- * Images must be JPG.
- * FPGA have to be connected to Host PC.
- * There must be enough storage for the program.
- * There must be enough storage to store results. 
- 
+## Operation Condition ##
+The following conditions must be met:
+
+* Hardware and software as follows must be available: 
+    - Host PC with Ubuntu 16.04
+    - FPGA
+* System and possible user-system must be installed.
+* Images must be accessible to file system.
+* Host PC must be powered.
+* FPGA must be powered.
+* Images must be JPG.
+* FPGA have to be connected to Host PC.
+* There must be enough storage for the program.
+* There must be enough storage to store results. 
+
 
 
 # Product Environment #
  
- ## Software ##
- * Ubuntu 16.04 - operating system of Host PC
- * QT - to create classic and embedded GUI
- * OpenCL - framework for writing programs that execute across heterogeneous platforms
+## Software ##
+* Ubuntu 16.04 - operating system of Host PC
+* QT - to create classic and embedded GUI
+* OpenCL - framework for writing programs that execute across heterogeneous platforms
  
- ## Hardware ##
- * Lab PC at CDNC institute
- * FPGA
+## Hardware ##
+* Lab PC at CDNC institute
+* FPGA
 
 # Product Functions #
- ## Basic Functions ##
+## Basic Functions ##
 
- * /F010/ show welcome screen
- * /F020/ show start menu
- * /F030/ choose input image (at least 5 images of an object at various angels)
- * /F040/ reset the selection
- * /F050/ choose operation mode: High Performance, Low Power Consumption, High Energy Efficiency
- * /F060/ start processing
- * /F070/ pause processing
- * /F080/ stop processing
- * /F090/ show output results (names and precents of top 5)
- * /F100/ terminate program
+* /F010/ show welcome screen
+* /F020/ show start menu
+* /F030/ choose input image (at least 5 images of an object at various angels)
+* /F040/ reset the selection
+* /F050/ choose operation mode: High Performance, Low Power Consumption, High Energy Efficiency
+* /F060/ start processing
+* /F070/ pause processing
+* /F080/ stop processing
+* /F090/ show output results (names and precents of top 5)
+* /F100/ terminate program
 
+## Optional Functions ##
 
- ## Optional Functions ##
-
- * /F110/ choose neural network type
- * /F120/ deploy training of an arbitraty neural network
- * /F130/ transfer learning of the already implemented neural network
- * /F140/ show neural network topology
- * /F150/ show output results in clear form (with histogram or pie chart)
+* /F110/ choose neural network type
+* /F120/ deploy training of an arbitraty neural network
+* /F130/ transfer learning of the already implemented neural network
+* /F140/ show neural network topology
+* /F150/ show output results in clear form (with histogram or pie chart)
 
 # Product-Data #
- ## System-Data ##
+## System-Data ##
 
-  * /D10/classification with percent bars
+ * /D10/classification with percent bars
 
- ## User-Data ##
+## User-Data ##
  
-  * /D20/ For classification the original image and the result must be kept.
-  * /D30/ The following user-data should be saved: /LD10/ 
-     * Image that the user uploads
-  * /D40/ If a user uploads more than one image, all images will be saved.
+* /D20/ For classification the original image and the result must be kept.
+* /D30/ The following user-data should be saved: /LD10/ 
+    * Image that the user uploads
+* /D40/ If a user uploads more than one image, all images will be saved.
 
 
 # Systemmodell #
 ![](images/MVC%20(3).jpg)
+
 * Programming with less complexity makes delightful code that is less buggy and easier to maintain because it is reusable without modification. In order to achieve this goal we use in this context the MVC architecture wich consists of:
 
 ## Modell ##
@@ -155,11 +156,11 @@ We can think about a use in the tourism field as well, as tourists may want to h
 * The controller provides model data to the view, and interprets user actions such as button clicks. The controller depends on the view and the model.
 
 # Product Performance #
- * To start the program, the user must click start-button.
- * User must choose the operation mode with one click.
- * The user does not need to press more than three buttons to upload an image.
- * While classifying an image one percent of the time required must be visible to the user .
- * No real time requirements.
+* To start the program, the user must click start-button.
+* User must choose the operation mode with one click.
+* The user does not need to press more than three buttons to upload an image.
+* While classifying an image one percent of the time required must be visible to the user .
+* No real time requirements.
 
 # Graphical User Interface #
 ## Introduction ##
@@ -167,6 +168,7 @@ We can think about a use in the tourism field as well, as tourists may want to h
 
 ## Start-Window ##
 * After program start a welcome window, with informations on the Software, will be displayed.(See figure x.xx)
+
 ![](images/Main_Window.png)
 
 ## Choose-Operation-Window ##
@@ -176,6 +178,7 @@ We can think about a use in the tourism field as well, as tourists may want to h
 * 3- High Energy Efficiency
 and browse to the image path
 * See figure (x.xx)
+
 ![](images/operation_mode_window.png)
 
 ## Browsing-Window ##
