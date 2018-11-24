@@ -103,35 +103,51 @@ The following conditions must be met:
 * OpenCL - framework for writing programs that execute across heterogeneous platforms
  
 ## Hardware ##
-* Lab PC at CDNC institute
-* FPGA
+* Desktop PC
+* DElSoC (SOC that includes FPGA)
 
 # Product Functions #
 ## Basic Functions ##
 
-* /F010/ show welcome screen
-* /F020/ show start menu
-* /F030/ choose input image (at least 5 images of an object at various angels)
-* /F040/ reset the selection
-* /F050/ choose operation mode: High Performance, Low Power Consumption, High Energy Efficiency
-* /F060/ start processing
-* /F070/ pause processing
-* /F080/ stop processing
-* /F090/ show output results (names and precents of top 5)
-* /F100/ terminate program
+* /F010/ Show welcome screen (including a image of FPGA).
+* /F020/ Show start menu. 
+* /F030/ Choose input image (at most 5 images of an object at various angles).
+* // Remove single image from the selection.
+* // Show thumbnails of the selected images.
+* /F040/ Reset the selection of the images.
+* /F050/ Choose operation mode: 
+        High Performance
+        Low Power Consumption
+        High Energy Efficiency.
+* // Change the operation mode before starting processing.
+* // Block parts of GUI while processing.
+* /F060/ Start processing.
+* /F070/ Pause processing.
+* // Resume processing.
+* /F080/ Stop processing.
+* // Aggregate results of multiple images.
+* /F090/ Show output results (names and precentages of top 5).
+* /F100/ Terminate program.
+* /F110/ Start a new classification.
+* // Poll the request file from another system.
+* // Send back the results via ethernet.
+* // Run calculation through FPGA.
 
 ## Optional Functions ##
 
-* /F110/ choose neural network type
-* /F120/ deploy training of an arbitraty neural network
-* /F130/ transfer learning of the already implemented neural network
-* /F140/ show neural network topology
-* /F150/ show output results in clear form (with histogram or pie chart)
+* /F110/ Choose the neural network topology.
+* /F140/ Show the neural network topology.
+* /F120/ Deploy training of an arbitrary neural network.
+* /F130/ Transfer learning of the already implemented neural network.
+* /F150/ Show output results in clear form (with a histogram).
+* // Write output results into a new file.
+* // Run calculation through GPU.
+* // Run calculation through ASIC.
 
 # Product-Data #
 ## System-Data ##
 
- * /D10/classification with percent bars
+ * /D10/ classification with percentage bars
 
 ## User-Data ##
  
@@ -270,5 +286,6 @@ The user runs the application and classifies an image.
 * Workstation
 * Echtzeitanwendung
 * Moblile Plattformen
+* Thumbnail
 
 
