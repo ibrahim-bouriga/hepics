@@ -193,16 +193,65 @@ and browse to the image path
 * Maintenance and reusability results from the implementation in the MVC principle.
 * Robustness plays a crucial role in the development, so that arbitrary keystrokes do not lead to a crash.
 
-# Testfälle und Testszenarien #
+# Test Cases #
 
-# Entwicklungsumgebung #
-* Altera SDK
-* Eclipse
-* Git
-* Latex
-* Markdown
-* Ubuntu
-* Gcov
+All functions are tested by the following test cases. The basic tests test the basic functions. The extended tests test the optional functions. The actions described here are atomic from a users point of view.
+
+## Basic tests  ##
+* /T010/ Start application (/F010/)
+* /T020/ Press start on welcome screen (/F020/)
+* /T030/ Start input image chooser (/F030/)
+* /T040/ Choose input-image-file (/F030/)
+* /T050/ Choose non-input-image-file (/F030/)
+* /T060/ Choose multiple input-image-files (/F030/)
+* /T070/ Abort selection (/F030/)
+* /T080/ Clear the selection (/F040/)
+* /T090/ Choose operation mode high performance (/F050/)
+* /T100/ Choose operation mode low power consumption (/F050/)
+* /T110/ Choose operation mode high energy efficiency (/F050/)
+* /T120/ Start processing (/F060/, /F090/, /F150/)
+* /T130/ Pause processing (/F070/)
+* /T140/ Stop processing (/F080/)
+* /T150/ Close application (/F100/)
+
+## Extended tests  ##
+* /T160/ Start topology chooser (/F110/)
+* /T170/ Choose AlexNet (/F110/)
+* /T180/ Choose GoogleNet (/F110/)
+* /T190/ Start weight chooser (/F120/)
+* /T200/ Choose a valid weights file (/F120/)
+* /T210/ Choose non-weight file (/F120/)
+* /T220/ Choose weights for another topology (/F120/)
+* /T230/ Start transfer learning (/F130/)
+* /T240/ Start display of network topology (/F140/)
+
+# Test Scenarios #
+
+The test scenarios consist of the test cases listed above.
+
+## Classify an Image  ##
+
+The user runs the application and classifies an image.
+
+
+
+# Development Environment #
+## Software ##
+* Operating system
+    * Ubuntu 16.04
+* Development tools
+    * Eclipse
+    * Eclipse CDT
+    * Gcov
+    * Boost
+    * Qt
+    * Qt Designer
+    * Altera SDK for OpenCL
+* Version-control
+    * Git
+* Documentation
+    * Markdown
+    * Latex
 
 # Glossar #
 
