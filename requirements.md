@@ -96,12 +96,12 @@ We can think about a use in the tourism field as well, as tourists may want to h
 # Product-Data #
  ## System-Data ##
 
-  * /D10/classification with percent bars
+  * /D10/ Classification with percent bars
 
  ## User-Data ##
  
   * /D20/ For classification the original image and the result must be kept.
-  * /D30/ The following user-data should be saved: /LD10/ 
+  * /D30/ The following user-data should be saved:  
      * Image that the user uploads
   * /D40/ If a user uploads more than one image, all images will be saved.
 
