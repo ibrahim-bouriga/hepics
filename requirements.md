@@ -147,15 +147,13 @@ The following conditions must be met:
 # Product-Data #
 ## System-Data ##
 
- * /D10/ classification with percentage bars
+ * /D10/ Classification results with percentage bars.
+ * /D20/ The nodes' weight files.
+ * /D30/ The neural network's topology.
 
 ## User-Data ##
  
-* /D20/ For classification the original image and the result must be kept.
-* /D30/ The following user-data should be saved: /LD10/ 
-    * Image that the user uploads
-* /D40/ If a user uploads more than one image, all images will be saved.
-
+* /D20/ The input image or images and the result must be kept for the classification.
 
 # Systemmodell #
 ![](images/MVC%20(3).jpg)
@@ -172,11 +170,21 @@ The following conditions must be met:
 * The controller provides model data to the view, and interprets user actions such as button clicks. The controller depends on the view and the model.
 
 # Product Performance #
-* To start the program, the user must click start-button.
-* User must choose the operation mode with one click.
-* The user does not need to press more than three buttons to upload an image.
-* While classifying an image one percent of the time required must be visible to the user .
-* No real time requirements.
+* /P10/ The user clicks on a start button in order to start the program.
+* /P20/ The user chooses the operation mode with one click.
+* /P30/ The user switches between operation modes in one click.
+* /P40/ The user uploads an image in a maximum of three clicks.
+* /P/ The user removes an image in one button.
+* /P/ The user resets the selection in one button.
+* /P50/ The system shows a progress bar while classifying.
+* /P/ The user pauses the process in one click.
+* /P/ The user resumes the process in one click.
+* /P/ The user cancels the process in a maximum of three buttons.
+* /P/ The user exits the program in a maximum of three buttons.
+* /P/ The user starts a new classification in a maximum of three buttons.
+* /P/ Low Power Consumption Mode should consume the least amount of power.
+* /P/ High Performance Mode should execute the fastest.
+* /P/ High Efficiency Mode is the most power consumption and time efficient of the three modes.
 
 # Graphical User Interface #
 ## Introduction ##
