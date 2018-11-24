@@ -97,20 +97,17 @@
 
 
 # Systemmodell #
+![](images/MVC%20(3).jpg)
+* Programming with less complexity makes delightful code that is less buggy and easier to maintain because it is reusable without modification. In order to achieve this goal we use in this context the MVC architecture wich consists of:
 
 ## Modell ##
-* Neuronales Netz
-* Convolutional part
+* The model represents the data, and does nothing else. The model does NOT depend on the controller or the view. It contains the pretrained neural network model AlexNet as well as the classification algorithm to be used on images.
 
 ## View ##
-* Anzeige des Bildes/Ordners
-* Anzeige des Profils
-* Anzeige des Netzes
+* The view displays the model data, and sends user actions (e.g. button clicks) to the controller. It represents the graphical user ineterface wich interacts with the user (See Graphical User Interface)
 
 ## Controller ##
-* Bilderwahl/Ordnerwahl
-* Wahl des Profils
-* Wahl des Netzes
+* The controller provides model data to the view, and interprets user actions such as button clicks. The controller depends on the view and the model.
 
 # Product Performance #
  * To start the program, the user must click start-button.
@@ -119,7 +116,28 @@
  * While classifying an image one percent of the time required must be visible to the user .
  * No real time requirements.
 
-# Bedienoberfläche #
+# Graphical User Interface #
+## Introduction ##
+* The GUI, which represents the front-end, is the communication channel between the user and the back-end. It will guide users through the variety of operations which can be performed by the System.
+
+## Start-Window ##
+* After program start a welcome window, with informations on the Software, will be displayed.(See figure x.xx)
+![](images/Main_Window.png)
+
+## Choose-Operation-Window ##
+* After clicking on Start-button in the start-window, another window will pop up. The user will have to chose a running mode:
+* 1- High Performance
+* 2- Low Power Consumption
+* 3- High Energy Efficiency
+and browse to the image path
+* See figure (x.xx)
+![](images/operation_mode_window.png)
+
+## Browsing-Window ##
+* The browser window allows a user to specify his input image.
+
+## Error-Window ##
+* If the operation mode or the input data was not specified an error is shown to notify the user. Here we can create two windows for each error See figure (x.xx)
 
 # Quality Specification #
 * The acceleration hardware should accelerate or save power consumption.
