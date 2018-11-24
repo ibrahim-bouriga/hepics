@@ -27,57 +27,73 @@
 * Keine Echtzeitanwendung
 * Nicht für Moblile Plattformen
 
-# Produkteinsatz #
+# Product Use #
+ 
+ ## Use Range ##
+ This program is designed for image classification. The user or subsystem can use this program to recognize pre-specified or learned
+ objects or object classes. Owing to running on heterogeneous platforms, user is also allowded to switch various operation modes for
+ different goals. Besides, the user can deploy training of an arbitrary neural network and transfer learning of an already implemented
+ neural network. 
+ 
+ ## Target Group ##
+ * developers of the compared system
+ * users who need to classify images
+ * systems which process images or solve problem in computer vision 
 
-## Einsatzgebiet ##
-* Vergleichssystem
-* System zur Massenklassifikation
-* Subsystem
+ 
+ ## Operation Precondition ##
+ The following conditions must be met:
+ * Hardware and software as follows must be available: 
+     Host PC with Ubuntu 16.04, FPGA
+ * System and possible user-system must be installed.
+ * Images must be accessible to file system.
 
-## Zielgruppe ##
-* Entwickler von vergleichbaren Systemen
-* Nutzer die viele Bilder zu klassifizieren haben
-* Systeme die eine Bildklassifikation gebrauchen können
 
-## Betriebsbedingungen ##
-* Hardware und Software wie unten vorhanden
-* System und mögliche Nutersysteme sind installiert
-* Bilder müssen über Dateisystem zugänglich sein
+# Product Environment #
+ 
+ ## Software ##
+ * Ubuntu 16.04 - operating system of Host PC
+ * QT - to create classic and embedded GUI
+ * OpenCL - framework for writing programs that execute across heterogeneous platforms
+ 
+ ## Hardware ##
+ * Lab PC at CDNC institute
+ * FPGA
 
-# Produktumgebung #
+# Product Functions #
+ ## Basic Functions ##
 
-## Software ##
-Ubuntu 16.04
-QT
+ * /F010/ show welcome screen
+ * /F020/ show start menu
+ * /F030/ choose input image (at least 5 images of an object at various angels)
+ * /F040/ reset the selection
+ * /F050/ choose operation mode: High Performance, Low Power Consumption, High Energy Efficiency
+ * /F060/ start processing
+ * /F070/ pause processing
+ * /F080/ stop processing
+ * /F090/ show output results (names and precents of top 5)
+ * /F100/ terminate program
 
-## Hardware ##
-Workstation
-FPGA
 
-# Produktfunktionen #
-* Auswahl Netz
-* Auswahl Profil
-* Auswahl Bilder
-* Start der Verarbeitung
-* Pause der Verarbeitung
-* Stop der Verarbeitung
+ ## Optional Functions ##
 
-# Produktdaten #
+ * /F110/ choose neural network type
+ * /F120/ deploy training of an arbitraty neural network
+ * /F130/ transfer learning of the already implemented neural network
+ * /F140/ show neural network topology
+ * /F150/ show output results in clear form (with histogram or pie chart)
 
-## System-Daten ##
-* Klassifikation mit Percent Bar
+# Product-Data #
+ ## System-Data ##
 
-## Benutzer-Daten ##
+  * /D10/classification with percent bars
 
-### /D10/ ###
-### Zur Klassifizierung muss das Originalbild sowie das Ergibnis vorgehalten werden ###
-
-### /D20/ ###
-#### über einen Kunden sind folgenden Daten zu speichern /LD10/ ####
-* Das Bild, das der Benutzer hochlädt.
-
-### /D30/ ###
-#### wenn ein Benutzer mehr als ein Bild hochlädt, werden alle Bilder gespeichert gespeichert ###
+ ## User-Data ##
+ 
+  * /D20/ For classification the original image and the result must be kept.
+  * /D30/ The following user-data should be saved: /LD10/ 
+     * Image that the user uploads
+  * /D40/ If a user uploads more than one image, all images will be saved.
 
 
 # Systemmodell #
@@ -96,22 +112,20 @@ FPGA
 * Wahl des Profils
 * Wahl des Netzes
 
-# Produktleistungen #
-
-* Zum starten des Programms muss der Benutzer auf start klicken.
-* the user have to choose the running mode with one click
-* Der Benutzer muss zum Hochladen eines Bildes höchstens drei Tasten betätigen
-* Während Klassifizieren eines Bildes muss für den Benutzer ein (Prozent der benötigte Zeit) sichtbar sein.
-* No real time requirements
+# Product Performance #
+ * To start the program, the user must click start-button.
+ * User must choose the operation mode with one click.
+ * The user does not need to press more than three buttons to upload an image.
+ * While classifying an image one percent of the time required must be visible to the user .
+ * No real time requirements.
 
 # Bedienoberfläche #
 
-# Qualitätszielbestimmungen #
-* Durch die Beschleunigungshardware soll eine Beschleunigung oder eine Energieersparnis erreicht werden
-* Die Testabdeckung soll möglichst hoch sein
-* Wart- und Wiederverwendbarkeit ergibt sich durch die Implementierung im MVC -Prinzip.
-* Robustheit spielt bei der Entwicklung eine maßgebliche Rolle, so dass willkürliches Tastendrücken nicht zum Absturz führt.
-
+# Quality Specification #
+* The acceleration hardware should accelerate or save power consumption.
+* The test coverage should be as high as possible.
+* Maintenance and reusability results from the implementation in the MVC principle.
+* Robustness plays a crucial role in the development, so that arbitrary keystrokes do not lead to a crash.
 
 # Testfälle und Testszenarien #
 
