@@ -1,31 +1,66 @@
-# Einleitung #
+# Introduction #
+This project consists in building an image classification system, which takes images as input and gives a prediction -in percentages- of what would be on these given images. For instance, the system may receive an image of a human face as input, after treating the data, the output is then represented in a small list of objects that may be on the picture, ordered by their probability percentages. In this case, the system should display a list, whose first element "human face" is, next to the probability which the system calculated for this result.
 
-# Zielbestimmung #
+The motivation behind this project is artificial neural networks. These are computing systems which were inspired by the biological neural network of an animal. Such systems gain knowledge in executing tasks -in our case image recognition- through a certain training. For an image recognition neural network to correctly perform its task, it is required to analyze examples of images that have been manually labeled. Other uses where artificial neural networks are deployed are predictions, function approximations, or real life patterns recognition...
 
-## Muss Kriterien ##
+Nowadays, machine learning is gaining in importance as the goal of including machines in various activities -industries, services, economy- in order to reach high levels of efficiency is in need of artificial intelligence. Indeed, under the applications of artificial neural networks, we can mention autonomous driving, natural language processing, gesture recognition, and of course, face recognition, which is the main application of this project.
 
-* Muss Bilder klassifizieren können
-* Muss Neuronale Netze verwenden
-* Muss Alex Net unterstützen
-* Muss teure Berechnungen an Beschleunigungshardware weiergeben können
-* Muss FPGA durch OpenCL unterstützen
-* Muss Profile High Performance, Low Power und Energy Efficency unterstützen
-* Muss per GUI steuerbar sein
-* Muss Schnittstelle für Klassifikation vorweisen
-* Muss Performance messen können
-* Muss Verbrauch messen können
+It must not be forgotten to mention as well, that there exists different neural networks models, such as Back-Propagation, Boltzman Machines and Deep Neural Networks, with which we will deal in this project. In particular, we will deal with "AlexNet", which is a convolutional neural network consisting of 8 layers, 5 of which are convolutional while the others are fully-connected layers.
 
-## Kann Kriterien ##
+On one hand, deploying deep neural networks not only means unlocking a massive parallelism potential for our system, but it also means that unsupervised learning is most definitely possible. On the other, we are in need of a huge data set for this unsupervised training. It is important to mention as well, that deep neural networks require intense computations, which manifests itself in high power consumption and learning and classification time.
 
-* Kann GPU unterstützen
-* Kann DSP unterstützen
-* Kann Google Net unterstützen
-* Kann Training von Neuronalen netzen unterstützen
-* Kann die Topologie des Neuronalen Netzes anzeigen
+For the sake of decreasing the number of disadvantages of deep neural networks, the decision of using heterogeneous platforms such as CPUs, GPUs and FPGAs was made. These will provide the system with a good performance for a wide range of computations, as well as a decent usage of pipelines and parallelism, and of course, all with low power consumption.
 
-## Abgrenzungskriterien ##
-* Keine Echtzeitanwendung
-* Nicht für Moblile Plattformen
+To take a taste at the fascinating world of machine learning and artificial neural networks, we invite you to try out our image recognition system, and maybe even have a little fun with it.
+
+
+# Target specifications #
+
+## Must-requirements ##
+
+* The system must be able to classify images.
+* The system must allow the selection of one or more input images.
+* The system must show the result of the treatment.
+* The system must employ artificial neural networks.
+* The system must deploy the AlexNet deep neural network.
+* The system must know at least one set of weights.
+* The system must be able to execute intense calculations through heterogeneous platforms (CPU, GPU, FPGA, ASIC).
+* The system must support an FPGA through OpenCL.
+* The system must hide the OpenCL details behind an abstraction layer.
+* The system must offer three performance profiles : 
+   -High Performance
+   -Low Power
+   -Energy Efficency
+* The system must allow the control and the execution of commands through a GUI interface.
+* The system must be able to run the GUI on an Ubuntu system.
+* The system must exhibit a classification interface.
+* The system must be able to measure its performance.
+* The system must be able to measure its power consumption.
+* The system communicate with another system. It looks into a file to search for an image treatment request, and send back the results via Ethernet connection.
+* The system must include the aggregate feature. This feature fuses the results of different treatments of the same object in order to reach more precision.
+* The system must offer the possibility of entering up to 5 images in the aggregate feature.
+
+
+## Can-Requirements ##
+
+* The system can offer the possibility of entering more than 5 images in the aggregate feature.
+* The system can deploy a GPU.
+* The system can deploy a DSP.
+* The system can deploy the GoogleNet neural network next to AlexNet. 
+* The system can allow the training of neural networks.
+* The system can display the topology of the neural network.
+* The system can write the results into a file in order to use it for another program.
+* The system can run batch processing.
+* The system can carry out transfer learning of the already implemented neural network.
+* The system can beautify the output result.
+* The system can generate weight files.
+* The system can load different weight files.
+* The system can pause, resume or cancel the classification process.
+
+
+## Criteria of demarcation ##
+* The system cannot be a real-time application.
+* The system cannot run on mobile-plattforms.
 
 # Product Use #
  
