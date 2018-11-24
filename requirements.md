@@ -155,12 +155,12 @@ The following conditions must be met:
  
 * /D20/ The input image or images and the result must be kept for the classification.
 
-# Systemmodell #
+# System Model #
 ![](images/MVC%20(3).jpg)
 
 * Programming with less complexity makes delightful code that is less buggy and easier to maintain because it is reusable without modification. In order to achieve this goal we use in this context the MVC architecture wich consists of:
 
-## Modell ##
+## Model ##
 * The model represents the data, and does nothing else. The model does NOT depend on the controller or the view. It contains the pretrained neural network model AlexNet as well as the classification algorithm to be used on images.
 
 ## View ##
@@ -212,10 +212,16 @@ and browse to the image path
 * If the operation mode or the input data was not specified an error is shown to notify the user. Here we can create two windows for each error See figure (x.xx)
 
 # Quality Specification #
-* The acceleration hardware should accelerate or save power consumption.
+* The FPGA should accelerate or save power.
 * The test coverage should be as high as possible.
-* Maintenance and reusability results from the implementation in the MVC principle.
+* Maintenance and reusability results is reached through the implementation in the MVC principle.
 * Robustness plays a crucial role in the development, so that arbitrary keystrokes do not lead to a crash.
+* Code quality should avoid any kind of embarassing pauses.
+* A well-structured design should provide the system with extensibility and portability.
+* Low Power Consumption Mode provide the system with power saving.
+* High Performance Mode provides the system with high performance.
+* High Efficiency Mode provides the system with power consumption and -time efficiency.
+* A presentable GUI guides the user easily through the process.
 
 # Test Cases #
 
