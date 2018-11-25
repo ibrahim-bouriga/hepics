@@ -109,8 +109,8 @@ The following conditions must be met:
 # Product Functions #
 ## Basic Functions ##
 
-* /F010/ Show welcome screen (including a image of FPGA).
-* /F020/ Show start menu. 
+* /F010/ Show welcome window (including a image of FPGA).
+* /F020/ Show main window. 
 * /F030/ Choose input image (at most 5 images of an object at various angles).
 * /F040/ Remove single image from the selection.
 * /F050/ Show thumbnails of the selected images.
@@ -190,28 +190,36 @@ The view displays the model data. The model data is in this case the input image
 
 # Graphical User Interface #
 ## Introduction ##
-* The GUI, which represents the front-end, is the communication channel between the user and the back-end. It will guide users through the variety of operations which can be performed by the System.
+The GUI, which represents the front-end, is the communication channel between the user and the back-end (the internal system). It will guide users through the variety of operations which can be performed by the System.
 
-## Start-Window ##
-* After program start a welcome window, with informations on the Software, will be displayed.(See figure x.xx)
+## Welcome-Window ##
+After the program starts, a welcome window with information on the Software will be displayed. This information consists of a short description of the  system and the current version of the software.(See figure x.xx)
 
 ![](images/Main_Window.png)
 
-## Choose-Operation-Window ##
-* After clicking on Start-button in the start-window, another window will pop up. The user will have to chose a running mode:
+## Main-Window ##
+After clicking on Start-button in the welcome window, another window will pop up. It is called main window.The main window contains multiple sections: 
+
+### Choose-Operation-Section ###
+ The user has to choose a running mode:
 * 1- High Performance
 * 2- Low Power Consumption
 * 3- High Energy Efficiency
-and browse to the image path
 * See figure (x.xx)
 
 ![](images/operation_mode_window.png)
 
-## Browsing-Window ##
-* The browser window allows a user to specify his input image.
+### Result-Section ###
+The result section contains results of aggregation. The results are represented in form of text. The results are the probabilities of the top detected objects in percentages.  
 
-## Error-Window ##
-* If the operation mode or the input data was not specified an error is shown to notify the user. Here we can create two windows for each error See figure (x.xx)
+### Progress-Bar ###
+The progress bar shows the state of the current running process.
+
+### Image-Section ###
+The image section consists of multiple buttons which can be used to add images. Thumbnails are generated afterwards and will be displayed on the buttons. An image can be removed through clicking on the remove-button. All images can also be removed at once if the user clicks on the reset-button.
+
+### Control-Section ###
+Using the control section the user is able to start and cancel the process.
 
 # Quality Specification #
 * The FPGA should accelerate or save power.
