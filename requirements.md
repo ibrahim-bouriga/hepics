@@ -219,7 +219,7 @@ The progress bar shows the state of the current running process.
 The image section consists of multiple buttons which can be used to add images. Thumbnails are generated afterwards and will be displayed on the buttons. An image can be removed through clicking on the remove-button. All images can also be removed at once if the user clicks on the reset-button.
 
 ### Control-Section ###
-Using the control section the user is able to start and cancel the process.
+By using the control section the user is able to start and cancel the process. Once the classification starts, the start button becomes a cancel button. While running the user can pause the classification by clicking on the pause button. In this case the pause button becomes a resume button.
 
 # Quality Specification #
 * The FPGA should accelerate or save power.
