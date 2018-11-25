@@ -109,9 +109,9 @@ The following conditions must be met:
 # Product Functions #
 ## Basic Functions ##
 
-* /F010/ Show welcome window (including a image of FPGA).
+* /F010/ Show welcome window.
 * /F020/ Show main window. 
-* /F030/ Choose input image (at most 5 images of an object at various angles).
+* /F030/ Choose input image (at most 5 images of an object).
 * /F040/ Remove single image from the selection.
 * /F050/ Show thumbnails of the selected images.
 * /F060/ Reset the selection of the images.
@@ -120,30 +120,33 @@ The following conditions must be met:
         Low Power Consumption
         High Energy Efficiency.
 * /F080/ Change the operation mode before starting processing.
-* /F090/ Block parts of GUI while processing.
+* /F090/ Block parts of GUI.
 * /F100/ Start processing.
 * /F110/ Pause processing.
 * /F120/ Resume processing.
-* /F130/ Stop processing.
-* /F140/ Run calculation through FPGA.
-* /F150/ Aggregate results of multiple images.
-* /F160/ Show output results (names and precentages of top 5).
-* /F170/ Terminate program.
-* /F180/ Start a new classification.
-* /F190/ Poll the request file from another system.
-* /F200/ Send back the results via ethernet.
+* /F130/ Cancel processing.
+* /F140/ Switch between start button and cancel button.
+* /F150/ Switch between pause button and resume button.
+* /F160/ Run calculation through FPGA.
+* /F170/ Aggregate results of multiple images.
+* /F180/ Show output results (names and precentages of top 4).
+* /F190/ Terminate program.
+* /F200/ Start a new classification.
+* /F210/ Poll the request file from another system.
+* /F220/ Send back the results via ethernet.
 
 
 ## Optional Functions ##
 
-* /F210/ Run calculation through GPU.
-* /F220/ Run calculation through ASIC.
-* /F230/ Choose the neural network topology.
-* /F240/ Show the neural network topology.
-* /F250/ Deploy training of an arbitrary neural network.
-* /F260/ Transfer learning of the already implemented neural network.
-* /F270/ Show output results in clear form (with a histogram).
-* /F280/ Write output results into a new file.
+* /F230/ Run calculation through GPU.
+* /F240/ Run calculation through ASIC.
+* /F250/ Choose the neural network topology.
+* /F260/ Show the neural network topology.
+* /F270/ Deploy training of an arbitrary neural network.
+* /F280/ Transfer learning of the already implemented neural network.
+* /F290/ Show a progress bar while classifying.
+* /F300/ Show output results in clear form (with a histogram).
+* /F310/ Write output results into a new file.
 
 
 # Product-Data #
@@ -155,7 +158,8 @@ The following conditions must be met:
 
 ## User-Data ##
  
- * /D40/ The input image or images and the result must be kept for the classification.
+ * /D40/ The input images are saved.
+ * /D50/ The results are saved.
 
 # System Model #
 ![](images/MVC%20(3).jpg)
@@ -240,12 +244,15 @@ All functions are tested by the following test cases. The basic tests test the b
 ## Basic tests  ##
 * /T010/ Start application (/F010/)
 * /T020/ Press start on welcome screen (/F020/)
-* /T030/ Start input image chooser (/F030/)
-* /T040/ Choose input-image-file (/F030/)
-* /T050/ Choose non-input-image-file (/F030/)
-* /T060/ Choose multiple input-image-files (/F030/)
-* /T070/ Abort selection (/F030/)
-* /T080/ Clear the selection (/F040/)
+* /T030/ Start file open dialog for image (/F030/)
+* /T040/ Choose image file (/F030/, /F050/)
+* /T050/ When choosing an image choose a non image file (/F030/)
+* /T060/ Choose multiple input image files (/F030/)
+* /T070/ Abort image file selection (/F030/)
+* /T080/ Remove a selected image (/F040/)
+* /T090/ Reset the selection of images (/F060/)
+
+
 * /T090/ Choose operation mode high performance (/F050/)
 * /T100/ Choose operation mode low power consumption (/F050/)
 * /T110/ Choose operation mode high energy efficiency (/F050/)
