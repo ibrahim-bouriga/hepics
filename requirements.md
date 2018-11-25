@@ -112,37 +112,39 @@ The following conditions must be met:
 * /F010/ Show welcome screen (including a image of FPGA).
 * /F020/ Show start menu. 
 * /F030/ Choose input image (at most 5 images of an object at various angles).
-* // Remove single image from the selection.
-* // Show thumbnails of the selected images.
-* /F040/ Reset the selection of the images.
-* /F050/ Choose operation mode: 
+* /F040/ Remove single image from the selection.
+* /F050/ Show thumbnails of the selected images.
+* /F060/ Reset the selection of the images.
+* /F070/ Choose operation mode: 
         High Performance
         Low Power Consumption
         High Energy Efficiency.
-* // Change the operation mode before starting processing.
-* // Block parts of GUI while processing.
-* /F060/ Start processing.
-* /F070/ Pause processing.
-* // Resume processing.
-* /F080/ Stop processing.
-* // Aggregate results of multiple images.
-* /F090/ Show output results (names and precentages of top 5).
-* /F100/ Terminate program.
-* /F110/ Start a new classification.
-* // Poll the request file from another system.
-* // Send back the results via ethernet.
-* // Run calculation through FPGA.
+* /F080/ Change the operation mode before starting processing.
+* /F090/ Block parts of GUI while processing.
+* /F100/ Start processing.
+* /F110/ Pause processing.
+* /F120/ Resume processing.
+* /F130/ Stop processing.
+* /F140/ Run calculation through FPGA.
+* /F150/ Aggregate results of multiple images.
+* /F160/ Show output results (names and precentages of top 5).
+* /F170/ Terminate program.
+* /F180/ Start a new classification.
+* /F190/ Poll the request file from another system.
+* /F200/ Send back the results via ethernet.
+
 
 ## Optional Functions ##
 
-* /F110/ Choose the neural network topology.
-* /F140/ Show the neural network topology.
-* /F120/ Deploy training of an arbitrary neural network.
-* /F130/ Transfer learning of the already implemented neural network.
-* /F150/ Show output results in clear form (with a histogram).
-* // Write output results into a new file.
-* // Run calculation through GPU.
-* // Run calculation through ASIC.
+* /F210/ Run calculation through GPU.
+* /F220/ Run calculation through ASIC.
+* /F230/ Choose the neural network topology.
+* /F240/ Show the neural network topology.
+* /F250/ Deploy training of an arbitrary neural network.
+* /F260/ Transfer learning of the already implemented neural network.
+* /F270/ Show output results in clear form (with a histogram).
+* /F280/ Write output results into a new file.
+
 
 # Product-Data #
 ## System-Data ##
@@ -153,7 +155,7 @@ The following conditions must be met:
 
 ## User-Data ##
  
-* /D20/ The input image or images and the result must be kept for the classification.
+ * /D40/ The input image or images and the result must be kept for the classification.
 
 # System Model #
 ![](images/MVC%20(3).jpg)
@@ -170,21 +172,21 @@ The view displays the model data. The model data is in this case the input image
 * The controller interprets user actions such as button clicks. It depends on the view and the model and controls the interactions between them.
 
 # Product Performance #
-* /P10/ The user clicks on a start button in order to start the program.
-* /P20/ The user chooses the operation mode with one click.
-* /P30/ The user switches between operation modes in one click.
-* /P40/ The user uploads an image in a maximum of three clicks.
-* /P/ The user removes an image in one button.
-* /P/ The user resets the selection in one button.
-* /P50/ The system shows a progress bar while classifying.
-* /P/ The user pauses the process in one click.
-* /P/ The user resumes the process in one click.
-* /P/ The user cancels the process in a maximum of three buttons.
-* /P/ The user exits the program in a maximum of three buttons.
-* /P/ The user starts a new classification in a maximum of three buttons.
-* /P/ Low Power Consumption Mode should consume the least amount of power.
-* /P/ High Performance Mode should execute the fastest.
-* /P/ High Efficiency Mode is the most power consumption and time efficient of the three modes.
+* /P010/ The user clicks on a start button in order to start the program.
+* /P020/ The user chooses the operation mode with one click.
+* /P030/ The user switches between operation modes in one click.
+* /P040/ The user uploads an image in a maximum of three clicks.
+* /P050/ The user removes an image in one button.
+* /P060/ The user resets the selection in one button.
+* /P070/ The system shows a progress bar while classifying.
+* /P080/ The user pauses the process in one click.
+* /P090/ The user resumes the process in one click.
+* /P100/ The user cancels the process in a maximum of three buttons.
+* /P110/ The user exits the program in a maximum of three buttons.
+* /P120/ The user starts a new classification in a maximum of three buttons.
+* /P130/ Low Power Consumption Mode should consume the least amount of power.
+* /P140/ High Performance Mode should execute the fastest.
+* /P150/ High Energy Efficiency Mode is the most power consumption and time efficient of the three modes.
 
 # Graphical User Interface #
 ## Introduction ##
