@@ -175,6 +175,65 @@ The view displays the model data. The model data is in this case the input image
 ## Controller ##
 * The controller interprets user actions such as button clicks. It depends on the view and the model and controls the interactions between them.
 
+## Use Cases ##
+
+### Use Case: Give classification request ###
+
+Primary Actor: External system
+
+Stakeholders and Interest:
+	External systems human user: Wants external system to provide its service fast, accurate and energy efficient.
+
+Preconditions:
+	Input images were sent.
+
+Post conditions:
+	The input images were sent.
+
+Main Success Scenario:
+1. User runs external system.
+2. External system writes command to request file.
+3. Image classification system reads request file.
+4. Image classification system accepts the request.
+
+Extensions:
+
+*a. At any time, image classification system is shut down:
+
+1. A shut down signal is sent.
+    
+3a. The request is invalid.
+
+1. An error signal is sent.
+
+
+### Use Case: Send input image ###
+
+Primary Actor: External system
+
+Stakeholders and Interest:
+	External systems human user: Wants external system to provide its service fast, accurate and energy efficient.
+
+Preconditions:
+	External system and image classification system are running.
+	The external system must be connected to the image classification system.
+	The external system must be able to write the request file.
+
+Postconditions:
+	The image classification system has access to the images to be classified.
+
+Main Success Scenario:
+1. User runs external system.
+2. External system sends image file to filesystem of image classification system.
+3. External system repeats 2 until done.
+
+Extensions:
+
+*a. At any time, image classification system is shut down:
+
+1. A shut down signal is sent.
+
+
 # Product Performance #
 * /P010/ The user clicks on a start button in order to start the program.
 * /P020/ The user chooses the operation mode with one click.
@@ -246,7 +305,7 @@ All functions are tested by the following test cases. The basic tests test the b
 * /T020/ Press start on welcome screen. (/F020/)
 * /T030/ Start file open dialog for image. (/F030/)
 * /T040/ Choose image file. (/F030/, /F050/)
-* /T050/ Choose a file, whose extension name is not supported. (/F030/)
+* /T050/ Choose a file, whose format is not supported. (/F030/)
 * /T060/ Choose multiple input image files. (/F030/)
 * /T070/ Abort image file selection. (/F030/)
 * /T080/ Remove a selected image. (/F040/)
