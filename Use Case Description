@@ -1,0 +1,11 @@
+select mutiple images:
+
+A user choose mutiple images one by one. The system checks if their extension names are supported.
+All the invalid files will not be selected successfully. The system then shows the thumbnails of correct image files.
+If the user removes only one images or resets the selection to remove all the selected images, the system will update the state and be ready for the new selection.
+
+view results:
+
+After a successful processing, the user views results of it. 
+The system shows the names and percentages of top 4 object classes.
+And the system is ready for the next classification.
